@@ -33,7 +33,7 @@ public class AuthController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(AuthController.class);
 
-
+	@ApiOperation(value = "AWS health check", response = ResponseEntity.class)
 	@GetMapping(path = "/health")
 	public ResponseEntity<Object> healthCheckup() {
 		
@@ -41,7 +41,7 @@ public class AuthController {
 		return new ResponseEntity<>("", HttpStatus.OK);
 	}
 	@CrossOrigin
-
+	@ApiOperation(value = "Verify credentials and generate JWT Token", response = ResponseEntity.class)
 	@PostMapping(value = "/login")
 	public ResponseEntity<Object> login(@RequestBody UserData userlogincredentials) {
 		//Generates token for login
@@ -60,7 +60,7 @@ public class AuthController {
 		}
 	}
 	@CrossOrigin
-
+	@ApiOperation(value = "Validate JWT Token", response = ResponseEntity.class)
 	@GetMapping(value = "/validate")
 	public ResponseEntity<Object> getValidity(@RequestHeader("Authorization") final String token) {
 		//Returns response after Validating received token

@@ -2,7 +2,6 @@ package com.cts.controller;
 
 import java.util.List;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,14 +23,15 @@ import com.cts.exception.StockNotFoundException;
 import com.cts.service.SubscriptionService;
 
 import feign.FeignException;
-
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 
 
 
 @Slf4j
 @RestController
-
+@Api(produces = "application/json", value="Manages subscriptions and unsubscriptions")
 public class SubscriptionController {
 
 	private static final Logger log = LoggerFactory.getLogger(SubscriptionController.class);
@@ -46,7 +46,7 @@ public class SubscriptionController {
 	
 
 	@CrossOrigin
-
+	@ApiOperation(value = "Subscribes to the service",produces="text/plain", response = ResponseEntity.class)
 	@PostMapping("/subscribe")
 	public ResponseEntity<String> subscribe(@RequestHeader("Authorization") String token,
 			@RequestBody PrescriptionDetails prescriptionDetails) throws InvalidTokenException,
@@ -87,7 +87,7 @@ public class SubscriptionController {
 
 	
 	@CrossOrigin
-
+	@ApiOperation(value = "Unsubscribes to the service",produces="text/plain", response = ResponseEntity.class)
 	@PostMapping("/unsubscribe/{mId}/{sId}")
 	public ResponseEntity<String> unsubscribe(@RequestHeader("Authorization") String token,
 			@PathVariable("mId") String memberId, @PathVariable("sId") Long subscriptionId)
@@ -102,7 +102,7 @@ public class SubscriptionController {
 
 
 	@CrossOrigin
-
+	@ApiOperation(value = "Get list of subscriptions", response = List.class)
 	@GetMapping("/getAllSubscriptions/{mId}")
 	public List<SubscriptionDetails> getAllSubscriptionsforMember(@RequestHeader("Authorization") String token,
 			@PathVariable("mId") String mId) throws InvalidTokenException{
@@ -115,7 +115,7 @@ public class SubscriptionController {
 	
 	
 	@CrossOrigin
-
+	@ApiOperation(value = "Get name of the drug for given subscription service", response = ResponseEntity.class)
 	@GetMapping("/getDrugName/{sId}")
 	public ResponseEntity<String> getDrugNameBySubscriptionId(@RequestHeader("Authorization") String token,
 			@PathVariable("sId") Long sId) throws InvalidTokenException{

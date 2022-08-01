@@ -2,13 +2,10 @@ package com.cts.controller;
 
 import java.util.List;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +21,11 @@ import com.cts.exception.InvalidTokenException;
 import com.cts.exception.StockNotFoundException;
 import com.cts.service.DrugDetailsService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @RestController
+@Api(produces = "application/json", value = "Manages drugs")
 public class DrugController {
     
 	private static final Logger log = LoggerFactory.getLogger(DrugController.class);
@@ -38,21 +39,17 @@ public class DrugController {
      * http://localhost:8081/drugdetailapp/getAllDrugs
      */
     @CrossOrigin
-
+    @ApiOperation(value = "Get all drugs", response = List.class)
     @GetMapping({ "/getAllDrugs" })
     public List<DrugDetails> getAllDrugs() {
         return (List<DrugDetails>)this.drugDetailsService.getAllDrugs();
     }
     /**
      * http://localhost:8081/drugdetailapp/searchDrugsById/{id}
-     * @param token
-     * @param id
-     * @return
-     * @throws InvalidTokenException
-     * @throws DrugNotFoundException
+ 
      */
     @CrossOrigin
-//    @ApiOperation(value = "Search drug by id", response = DrugDetails.class)
+    @ApiOperation(value = "Search drug by id", response = DrugDetails.class)
     @GetMapping({ "/searchDrugsById/{id}" })
     public DrugDetails getDrugById(@RequestHeader("Authorization") final String token, @PathVariable("id") final String id) throws InvalidTokenException, DrugNotFoundException {
     	return this.drugDetailsService.getDrugById(id, token);
@@ -68,7 +65,7 @@ public class DrugController {
      * @throws DrugNotFoundException
      */
     @CrossOrigin
-
+    @ApiOperation(value = "Search drug by name", response = DrugDetails.class)
     @GetMapping({ "/searchDrugsByName/{name}" })
     public DrugDetails getDrugByName(@RequestHeader("Authorization") final String token, @PathVariable("name") final String name) throws InvalidTokenException, DrugNotFoundException {
     	try {
@@ -81,26 +78,17 @@ public class DrugController {
     }
     /**
      * http://localhost:8081/drugdetailapp//getDispatchableDrugStock/{id}/{location}
-     * @param token
-     * @param id
-     * @param location
-     * @return
-     * @throws InvalidTokenException
-     * @throws StockNotFoundException
-     * @throws DrugNotFoundException
+ 
      */
     @CrossOrigin
-
+    @ApiOperation(value = "Search stock by id", response = Stock.class)
     @GetMapping({ "/getDispatchableDrugStock/{id}/{location}" })
     public Stock getDispatchableDrugStock(@RequestHeader("Authorization") final String token, @PathVariable("id") final String id, @PathVariable("location") final String location) throws InvalidTokenException, StockNotFoundException, DrugNotFoundException {
         return this.drugDetailsService.getDispatchableDrugStock(id, location, token);
     }
  
-    @CrossOrigin
-
-
- 
-    
+  @CrossOrigin
+  @ApiOperation(value = "Update quantity by stock", response = ResponseEntity.class)
   @PutMapping({ "/updateDispatchableDrugStock/{name}/{location}/{quantity}" })
     public ResponseEntity<SuccessResponse> updateQuantity(@RequestHeader("Authorization") final String token, @PathVariable("name") final String name, @PathVariable("location") final String location, @PathVariable("quantity") final int quantity) throws InvalidTokenException, DrugNotFoundException, StockNotFoundException {
         try {
