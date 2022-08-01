@@ -1,0 +1,17 @@
+p,h2{
+    text-align: center;
+}
+  
+
+.message{
+    color: silver;
+}
+
+label{
+  text-align: left;
+  color:white;
+}
+
+input ,select{
+  background-color:rgb(191,197,197);
+}

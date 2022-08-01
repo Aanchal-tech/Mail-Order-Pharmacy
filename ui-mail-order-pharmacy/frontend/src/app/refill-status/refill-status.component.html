@@ -1,0 +1,39 @@
+<div class="vh-100 w-100 bg-plain status overflow-status text-center">
+
+<h2 class="text-dark">Refill Status</h2>
+
+<div *ngIf="tab">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Subscription ID</th>
+                <th>Refill ID</th>
+                <th>Quantity</th>
+                <th>Refill Date</th>
+                <th>Payment Status</th>
+
+            </tr>
+        </thead>
+        <tbody *ngFor='let status of refillstatus'>
+            <tr>
+                <td>{{status.subID}}</td>
+                <td>{{status.refillID}}</td>
+                <td>{{status.quantity}} </td>
+                <!-- <td>{{this.datePipe.transform(status.refillDate, 'dd-mm-yy')}}</td> -->
+                <td>{{status.refillDate }} </td>
+                <td>
+
+                <button class="btn btn-success "  *ngIf="pay" disabled>
+                    UNPAID
+                  </button>
+                  <button class="btn btn-success "  *ngIf="!pay" disabled>
+                      PAID
+                    </button>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p class="error">{{errorMsg}}</p>
+</div>

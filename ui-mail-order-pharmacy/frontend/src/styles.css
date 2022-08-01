@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+body {
+  /* position: relative; */
+  /* overflow: hidden; */
+  /* padding-top: calc(7rem + 72px); */
+  /* padding-bottom: 7rem; */
+  /* background: */
+  /* top, transparent black, faked with gradient */
+  /* linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ), */
+  /* bottom, image */
+  /* url("/assets/images/background13.jpg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: scroll;
+  /* background-size: auto; */
+  /* background:url("/assets/images/background11.jpg"); */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* background-position: center center; */
+  /* background-attachment: scroll; */
+}
+
+.home,
+.login {
+  text-align: center;
+  background:
+              /* top, transparent black, faked with gradient */
+              /* linear-gradient(
+                rgba(0, 0, 0, 0.7),
+                rgba(0, 0, 0, 0.7)
+              ), */
+              /* bottom, image */ 
+              url("assets/images/background8.jpg");
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  background-size: 100% 100%;
+  /* background-position: center center; */
+  /* background-attachment: scroll; */
+  /* background-size: auto; */
+  /* background:url("/assets/images/background11.jpg"); */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* background-position: center center; */
+  /* background-attachment: scroll; */
+}
+.ls {
+  letter-spacing: 5px;
+}
+
+.bg-nav {
+  background: linear-gradient(to left, #243b55, #141e30);
+}
+.bg-plain {
+  text-align: center;
+  background:
+          /* top, transparent black, faked with gradient */
+          /* linear-gradient(
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.7)
+          ), */
+          /* bottom, image */ 
+          url("assets/images/background15.jpg");
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: 100% 100%;
+  /* background-position: center center; */
+  /* background-attachment: scroll; */
+  /* background-size: auto; */
+  /* background:url("/assets/images/background11.jpg"); */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* background-position: center center; */
+  /* background-attachment: scroll; */
+}
+
+.bg-box {
+  background: linear-gradient(to left, #243b55, #141e30);
+}

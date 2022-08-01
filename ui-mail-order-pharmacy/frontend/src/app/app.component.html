@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg bg-nav" style="color: black">
+  <div class="container-fluid">
+    <a class="navbar-brand ms-3 py-2" routerLink="home" href="#"
+      >MAIL ORDER PHARMACY</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <!-- <li class="nav-item">
+            <a class="nav-link active" routerLink='home' aria-current="page" href="#">Home</a>
+          </li> -->
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            routerLink="drugs"
+            aria-current="page"
+            href="#"
+            >Available Drugs</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="search" href="#">Search Drug</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="subscribe" href="#">Subscribe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="subscriptions" href="#"
+            >Subscriptions</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="refillStatus" href="#"
+            >Refill Status</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="refilldue" href="#">Refill Dues</a>
+        </li>
+        <!-- <li
+            *ngIf="!this.serve.isLoggedIn()"
+            class="nav-item float-right bg-light rounded"
+          >
+            <a class="nav-link" routerLink="loginModule" href="#">LOGIN</a>
+          </li> -->
+      </ul>
+      <button class="btn logout fw-bolder" (click)="logout()" href="#">
+        LOGOUT
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+<div class="footer bg-dark text-light">
+  <!-- <h6 class="text-center">Site Designed and Developed By Pod-6 &copy; 2022</h6> -->
+</div>

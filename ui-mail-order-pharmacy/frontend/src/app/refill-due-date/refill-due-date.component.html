@@ -1,0 +1,45 @@
+
+<div class="vh-100 w-100 bg-plain text-start overflow-scroll text-light">
+
+<h2 style="text-align: center;" class="text-dark">Refill Dues</h2>
+<br>
+<div class="w-25 m-auto bg-box p-4 mb-5 mt-5 cshadow text-dark fw-bolder " style="border-radius: 1rem;">
+
+<form (ngSubmit)='handleSubmit()' ngNativeValidate>
+    <div class="form-group form">
+        <label>Prescription Date</label>
+        <input type="date" id="pDate" name="pDate"
+            class="form-control" placeholder="Prescription Datee" [(ngModel)]='date' required>
+            <br>
+            <p align:right>
+                <button class="btn btn-success" type="submit">Submit</button>
+            </p>
+    </div>
+
+</form>
+</div>
+<br>
+<br>
+<br>
+<div  *ngIf="fetched">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th >MemberID</th>
+                <th >Refill Time</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody *ngFor='let dues of due'>
+            <tr>
+                <td>{{dues.memberID}}</td>
+                <td>{{dues.refillTime}}</td>
+                <td>{{dues.quantity}}</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    </div>
+    <p class="error">{{errorMsg}}</p>
+</div>

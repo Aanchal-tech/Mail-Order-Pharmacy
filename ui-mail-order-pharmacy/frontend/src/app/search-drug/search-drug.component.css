@@ -1,0 +1,30 @@
+p{
+    text-align: center;
+}
+.error{
+    color: red;
+}
+table{
+    border-color: black;
+}
+
+h2{
+    text-align: center;
+}
+
+
+label{
+  text-align: left;
+  color:white;
+}
+
+input ,select{
+  background-color:rgb(191,197,197);
+}
+
+td,th{
+    text-align: center;
+}
+button{
+    text-align: center;
+}

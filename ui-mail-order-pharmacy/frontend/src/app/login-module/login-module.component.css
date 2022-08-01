@@ -1,0 +1,59 @@
+.bg-login {
+  background-color: rgb(191, 197, 197);
+}
+.cshadow {
+  box-shadow: rgb(0, 20, 25) 0px 50px 30px 10px;
+}
+
+.bg-right {
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #243b55,
+    #141e30 
+  );    /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #a2aab400,
+    #141e3000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+} 
+
+.title {
+  position: absolute;
+  /* left: 333px; */
+  top: -15px;
+  height: 88px;
+  font-weight: bold;
+  z-index: 1;
+  font-size: 50px;
+  color: #70869d;
+  letter-spacing: 0.15em;
+  text-shadow: -1px -1px 1px #efede3, 0px 1px 0 #2e2e2e, 0px 2px 0 #2c2c2c,
+    0px 3px 0 #2a2a2a, 0px 4px 0 #282828, 0px 5px 0 #262626, 0px 6px 0 #242424,
+    0px 7px 0 #222, 0px 8px 0 #202020, 0px 9px 0 #1e1e1e, 0px 10px 0 #1c1c1c,
+    0px 11px 0 #1a1a1a, 0px 12px 0 #181818, 0px 13px 0 #161616,
+    0px 14px 0 #141414, 0px 15px 0 #121212, 2px 20px 5px rgba(0, 0, 0, 0.9),
+    5px 23px 5px rgba(0, 0, 0, 0.3), 8px 27px 8px rgba(0, 0, 0, 0.5),
+    8px 28px 35px rgba(0, 0, 0, 0.9);
+}
+
+.l-title {
+  text-align: right;
+  color: rgb(191, 197, 197);
+  letter-spacing: 5px;
+  background: linear-gradient(to left, #243b55, #141e30);
+}
+.r-title {
+  left: 50%;
+  text-align: left;
+  letter-spacing: 5px;
+  color: rgb(191, 197, 197);
+  background: linear-gradient(to right, #243b55, #141e30);
+  /* background-color:rgb(162,167,170); */
+  /* color:black; */
+}
+
+input {
+  background: linear-gradient(to right, #243b55, #141e30);
+}

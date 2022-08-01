@@ -1,0 +1,32 @@
+{"properties": [
+  {
+    "name": "globalcors.cors-configurations.[/**].allowed-origins",
+    "type": "java.lang.String",
+    "description": "A description for 'globalcors.cors-configurations.[/**].allowed-origins'"
+  },
+  {
+    "name": "globalcors.cors-configurations.[/**].allowed-headers",
+    "type": "java.lang.String",
+    "description": "A description for 'globalcors.cors-configurations.[/**].allowed-headers'"
+  },
+  {
+    "name": "globalcors.cors-configurations.[/**].allowed-methods",
+    "type": "java.lang.String",
+    "description": "A description for 'globalcors.cors-configurations.[/**].allowed-methods'"
+  },
+  {
+    "name": "spring.cloud.default-filters",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.default-filters'"
+  },
+  {
+    "name": "spring.cloud.globalcors.cors-configurations.[/**].allowed-origins",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.globalcors.cors-configurations.[/**].allowed-origins'"
+  },
+  {
+    "name": "spring.cloud.gateway.filters",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.gateway.filters'"
+  }
+]}

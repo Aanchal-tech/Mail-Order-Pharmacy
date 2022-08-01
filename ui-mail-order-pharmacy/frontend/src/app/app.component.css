@@ -1,0 +1,21 @@
+a {
+  color: beige;
+  font-weight: bold;
+  text-shadow: 10px 8px 5px rgb(0, 20, 25);
+}
+.logout {
+  margin-left: 250px;
+  background-color: rgb(191, 197, 197);
+  color: rgb(23, 35, 54);
+  /* box-shadow: rgb(0, 20, 25) 0px 10px 20px 4px; */
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(150, 184, 207);
+  color: white;
+  text-align: center;
+}

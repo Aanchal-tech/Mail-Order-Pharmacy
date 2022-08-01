@@ -1,0 +1,122 @@
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+/* @font-face {
+  font-family: "blackjack";
+  src: local("blackjack"), url("../../assets/fonts/blackjack.otf");
+} */
+
+/* @font-face {
+  font-family: "Monarda";
+  src: local("Monarda"), url("../../assets/fonts/Monarda.ttf");
+} */
+@font-face {
+  font-family: "CodenameCoderFree4FBold";
+  src: url("/fonts/codenamecoderfree4f-bold-webfont.eot");
+  src: url("/fonts/codenamecoderfree4f-bold-webfont.eot?iefix") format("eot"),
+    url("/fonts/codenamecoderfree4f-bold-webfont.woff") format("woff"),
+    url("/fonts/codenamecoderfree4f-bold-webfont.ttf") format("truetype"),
+    url("/fonts/codenamecoderfree4f-bold-webfont.svg#webfont9UM32sTt")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.cshadow {
+  box-shadow: rgb(0, 20, 25) 0px 40px 30px 0px;
+}
+.lshadow {
+  box-shadow: rgb(0, 20, 25) 0px 60px 30px 0px;
+}
+
+.title {
+  position: absolute;
+  /* left: 333px; */
+
+  z-index: 1;
+  /* color: #70869d; */
+  /* color:rgb(191,197,197); */
+
+  letter-spacing: 0.15em;
+  letter-spacing: 5px;
+  /* text-shadow:
+     -1px -1px 1px #efede3,
+     0px 1px 0 #2e2e2e,
+     0px 2px 0 #2c2c2c,
+     0px 3px 0 #2a2a2a,
+     0px 4px 0 #282828,
+     0px 5px 0 #262626,
+     0px 6px 0 #242424,
+     0px 7px 0 #222,
+     0px 8px 0 #202020,
+     0px 9px 0 #1e1e1e,
+     0px 10px 0 #1c1c1c,
+     0px 11px 0 #1a1a1a,
+     0px 12px 0 #181818,
+     0px 13px 0 #161616,
+     0px 14px 0 #141414,
+     0px 15px 0 #121212,
+     2px 20px 5px rgba(0, 0, 0, 0.9),
+     5px 23px 5px rgba(0, 0, 0, 0.3),
+     8px 27px 8px rgba(0, 0, 0, 0.5),
+     8px 28px 35px rgba(0, 0, 0, 0.9); */
+}
+
+.u-title {
+  width: 22.7%;
+  height: 49px;
+  left: 48%;
+  font-size: 50px;
+  background: linear-gradient(to left, #243b55, #141e30);
+  top: 138px;
+  font-weight: bold;
+}
+.l-title {
+  width: 22.7%;
+  font-weight: bold;
+
+  left: 48%;
+  height: 49px;
+  font-size: 50px;
+  background: linear-gradient(to left, #243b55, #141e30);
+  top: 520px;
+}
+.welcome {
+  width: 500px;
+  left: 30%;
+  border-radius: 500px;
+  padding: 50px 20px;
+  height: auto;
+  font-size: 15px;
+  top: 250px;
+  color: white;
+  /* border:20px solid rgb(33,53,78); */
+  background: linear-gradient(to right, #243b55, #141e30);
+}
+
+.blackjack {
+  font-family: blackjack;
+  letter-spacing: 2px;
+  color: black;
+}
+
+.monarda {
+  font-family: Monarda;
+}
+
+.bg-card {
+  margin-left: 200px;
+  margin-top: -30px;
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.bg-silver {
+  background-color: rgb(191, 197, 197);
+}

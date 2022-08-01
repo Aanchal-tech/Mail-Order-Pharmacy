@@ -1,0 +1,19 @@
+
+label{
+    color:white;
+}
+p{
+    text-align: center;
+}
+table{
+    border-color: black;
+    width:70%;
+    margin-left: 180px;
+
+}
+td,th{
+    text-align: center;
+}
+.error{
+    color: red;
+}
