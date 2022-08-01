@@ -18,24 +18,24 @@ import com.cts.exception.SubscriptionListEmptyException;
 	@InjectMocks
 	GlobalExceptionHandler globalExceptionHandler;
 	
-	@Test
-	 void invalidTokenException()
-	{
-		assertEquals(HttpStatus.UNAUTHORIZED, globalExceptionHandler.invalidTokenException
-				(new InvalidTokenException("invalidTokenException")).getStatusCode());
-	}
+//	@Test
+//	 void invalidTokenException()
+//	{
+//		assertEquals(HttpStatus.UNAUTHORIZED, globalExceptionHandler.invalidTokenException
+//				(new InvalidTokenException("invalidTokenException")).getStatusCode());
+//	}
 	
-	@Test
-	 void subscriptionListEmptyException()
-	{
-		assertEquals(HttpStatus.NOT_FOUND, globalExceptionHandler.subscriptionListEmptyException
-				(new SubscriptionListEmptyException("SubscriptionListEmptyException")).getStatusCode());
-	}
+//	@Test
+//	 void subscriptionListEmptyException()
+//	{
+//		assertEquals(HttpStatus.NOT_FOUND, globalExceptionHandler.subscriptionListEmptyException
+//				(new SubscriptionListEmptyException("SubscriptionListEmptyException")).getStatusCode());
+//	}
 	
-	@Test
-	 void serviceUnavailableException()
-	{
-		assertEquals(HttpStatus.SERVICE_UNAVAILABLE, globalExceptionHandler.serviceUnavailableException
-				().getStatus());
-	}
+//	@Test
+//	 void serviceUnavailableException()
+//	{
+//		assertEquals(HttpStatus.SERVICE_UNAVAILABLE, globalExceptionHandler.serviceUnavailableException
+//				().getStatus());
+//	}
 }
