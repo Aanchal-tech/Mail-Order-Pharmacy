@@ -32,6 +32,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 @Api(produces = "application/json", value="Manages subscriptions and unsubscriptions")
+
 public class SubscriptionController {
 
 	private static final Logger log = LoggerFactory.getLogger(SubscriptionController.class);
