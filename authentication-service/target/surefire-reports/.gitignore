@@ -1,0 +1,10 @@
+/com.cts.AuthenticationServiceTest.txt
+/com.cts.controller.AuthControllerTest.txt
+/com.cts.entity.AuthResponseTest.txt
+/com.cts.entity.MessageResponseTest.txt
+/com.cts.entity.UserDataTest.txt
+/com.cts.service.CustomerDetailsServiceTest.txt
+/com.cts.service.CustomizedExceptionHandlingTest.txt
+/com.cts.service.JwtUtilTest.txt
+/com.cts.service.UnauthorizedExceptionHandlingTest.txt
+/TEST-com.cts.AuthenticationServiceTest.xml
