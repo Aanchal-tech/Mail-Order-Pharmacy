@@ -26,6 +26,7 @@ import io.swagger.annotations.ApiOperation;
 
 @RestController
 @Api(produces = "application/json", value = "Manages drugs")
+//   http://localhost:8081/drugdetailapp/swagger-ui.html?#/
 public class DrugController {
     
 	private static final Logger log = LoggerFactory.getLogger(DrugController.class);

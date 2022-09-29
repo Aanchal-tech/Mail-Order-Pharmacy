@@ -7,7 +7,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration 
 public class RouteConfigurations {
-	
+	// Hit this url to start the project
+	//http://localhost:8048/ui-service/
 	@Bean
 	public  RouteLocator routes(RouteLocatorBuilder builder) {
 		return builder.routes()
